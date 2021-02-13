@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: activemq-aws-consumer
+  profiles:
+    active: dev
+
+  activemq:
+    broker:
+      url: ssl://b-345574f4-716c-41c8-b305-18c3898a183f-1.mq.us-east-2.amazonaws.com:61617
+    user: admin
+    password: admin-gpi-manager
+    queue:
+      name: gpi-process
+    in-memory: false
+
+server:
+  port: 8090
+
+logging:
+  config: src/main/resources/logback-dev.xml
+
